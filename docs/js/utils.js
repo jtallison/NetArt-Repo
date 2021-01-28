@@ -1,6 +1,6 @@
 // A Selection of useful utilities
 
-function random(low, high) {
+function rando(low, high) {
   let multiplier = 1;
   let shift = 0;
 
