@@ -13,3 +13,10 @@ function rando(low, high) {
   let result = Math.random() * multiplier + shift;
   return result;
 }
+
+function clip(valueToClip, low = 0, high = 100) {
+  let clipped = Math.max(low, Math.min(high, valueToClip));
+  return clipped;
+}
+
+
