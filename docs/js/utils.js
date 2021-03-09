@@ -1,4 +1,6 @@
 // A Selection of useful utilities
+// include by
+// <script src=""
 
 function rando(low, high) {
   let multiplier = 1;
