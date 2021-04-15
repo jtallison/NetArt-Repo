@@ -3,7 +3,7 @@ application:
   project: nexusApps
   publicly_accessible: true
   port: 3001
-  dockerfile: nexushub-workshop/Dockerfile
+  dockerfile: /nexushub-workshop/Dockerfile
 routers:
 - name: main
   routes:
