@@ -45,10 +45,15 @@
         hub.register();
 
         //******* Anything to add here?
+        hub.channel('tap', 't', null, (tapstuff)=>{
+          hub.log('tap: '+ tapstuff);
+          var textDiv = document.getElementById('typed-text');
+          textDiv.innerHTML = `${textDiv.innerHTML} <br> ${tapstuff.value}`;
+        });
     </script>
 
     <video autoplay muted loop id="bgvid">
-		<source src="data/therm.mp4" type="video/mp4">
+		<source src="/data/therm.mp4" type="video/mp4">
 	</video>
 
 </body>

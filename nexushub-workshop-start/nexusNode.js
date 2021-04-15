@@ -29,6 +29,7 @@ hub.init(sio, publicFolder);
 // *********************
 // Set Hub Variables if you like.
 
+let messages = [];
 
 // *********************
 
@@ -109,9 +110,12 @@ hub.io.sockets.on('connection', function(socket) {
 
     hub.channel('tap', null, ["others", "display"], function(data) {
         hub.log(`tap ${data}`);
+        messages.push(data.value);
+        console.log(messages);
         hub.transmit('tap', null, data);
         //  socket.broadcast.emit('tap', data);  // just for others until a fix is made.
     });
+
 
     // Don't use auto callback creation yet, it's not secure.
     // hub.channel('tap', null, ["others", "display", "audio"]);
