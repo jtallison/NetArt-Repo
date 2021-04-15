@@ -1,12 +1,11 @@
+---
 application:
-  name: nexushub-workshop
-  project: nexusApps
-  publicly_accessible: true
-  port: 3001
-  dockerfile: nexushub-workshop/Dockerfile
+  name: "nexushub-workshop"
+  project: "nexusApps"
+  organization: "QoveryCommunity"
 routers:
-- name: main
+- name: "main-nexushub-workshop"
   routes:
-  - application_name: nexushub-workshop
+  - application_name: "nexushub-workshop"
     paths:
-    - /nexushub-workshop/
+    - "/*"
